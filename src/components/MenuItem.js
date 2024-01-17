@@ -1,5 +1,7 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import FastImage from 'react-native-fast-image';
 
 const MenuItem = props => {
   const {
@@ -15,13 +17,19 @@ const MenuItem = props => {
   } = props;
   return (
     <TouchableOpacity style={styles.containerStyle}>
-      {/* <Text>MenuItem</Text> */}
+      <View style={styles.menuImageView}>
+        {typeof url === 'string' ? (
+          <Ionicons name={url} size={32} color="#10837d" />
+        ) : (
+          <FastImage source={url} style={styles.menuImage} />
+        )}
+      </View>
       <View style={styles.menuTextView}>
         <View style={styles.menuTitleView}>
           <Text style={styles.textStyle}>{heading}</Text>
-          {/* {extraTagImage && (
+          {extraTagImage && (
             <FastImage source={extraTagImage} style={styles.extraTagImage} />
-          )} */}
+          )}
         </View>
         <Text style={styles.descriptionText} numberOfLines={2}>
           {desc}
@@ -58,5 +66,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 12,
     textAlign: 'left',
+  },
+  extraTagImage: {
+    width: 60,
+    height: 16,
+    marginHorizontal: 5,
+  },
+  menuImageView: {
+    width: 32,
+    alignItems: 'center',
   },
 });
