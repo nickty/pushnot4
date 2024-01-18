@@ -59,13 +59,13 @@ export default function SideMenu() {
     SpecialOffers: {
       heading: 'Special Offers',
       routeName: 'SpecialOffers',
-      // url: require('../img/special_offers.png'),
+      url: require('../img/special_offers.png'),
       desc: 'Exclusive discounts just for you',
     },
     Suggest: {
       heading: 'Request Medicine',
       routeName: 'SuggestMedicine',
-      // url: require('../img/medical_kit.png'),
+      url: require('../img/medical_kit.png'),
       desc: 'Request medicine/health products to add',
     },
     Refer: {
@@ -73,7 +73,7 @@ export default function SideMenu() {
       routeName: 'Refer',
       url: 'ios-gift',
       // desc: `${globalData?.refBonus} Taka bonus for every refer`,
-      // extraTagImage: require('../img/earn-more.gif'),
+      extraTagImage: require('../img/earn-more.gif'),
     },
     CallToOrder: {
       heading: 'Call to Order',

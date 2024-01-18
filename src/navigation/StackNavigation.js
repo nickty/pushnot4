@@ -3,6 +3,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/Home';
 import Login from '../screens/Login';
+import Search from '../screens/Search';
 
 const HomeStack = createStackNavigator();
 
@@ -17,6 +18,11 @@ const StackNavigation = () => {
       <HomeStack.Screen
         name="Login"
         component={Login}
+        options={{headerShown: false}}
+      />
+      <HomeStack.Screen
+        name="Search"
+        component={Search}
         options={{headerShown: false}}
       />
     </HomeStack.Navigator>
